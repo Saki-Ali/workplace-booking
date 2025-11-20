@@ -1,12 +1,10 @@
-version: "3.9"
-
 services:
   backend:
     build: ./backend
     ports:
       - "8000:8000"
     volumes:
-      - ./backend/app.db:/app/app.db
+      - ./backend/app.db:/app/backend/app.db
 
   frontend:
     build: ./frontend

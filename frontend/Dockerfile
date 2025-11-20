@@ -2,13 +2,13 @@ FROM node:20-alpine AS base
 
 WORKDIR /app
 
-COPY frontend/package*.json ./
-COPY frontend/tsconfig*.json ./
-COPY frontend/vite.config.ts ./
-COPY frontend/tailwind.config.js ./
-COPY frontend/postcss.config.js ./
-COPY frontend/index.html ./
-COPY frontend/src ./src
+COPY package*.json ./
+COPY tsconfig*.json ./
+COPY vite.config.ts ./
+COPY tailwind.config.js ./
+COPY postcss.config.js ./
+COPY index.html ./
+COPY src ./src
 
 RUN npm install
 RUN npm run build
