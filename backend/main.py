@@ -62,3 +62,8 @@ def create_booking(payload: schemas.BookingCreate, db: Session = Depends(get_db)
 def cancel_booking(booking_id: int, db: Session = Depends(get_db)):
     crud.delete_booking(db, booking_id)
     return None
+
+
+@app.get("/")
+def root():
+    return {"message":"Ali's backend is running!"}
